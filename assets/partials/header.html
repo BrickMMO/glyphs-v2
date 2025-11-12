@@ -1,0 +1,24 @@
+<!-- reusable header (navbar + mobile menu) -->
+<div class="navbar-container">
+  <div class="w3-bar w3-white w3-card">
+    <a href="index.html"><img class="main-logo" src="assets/images/logo.png" alt="BrickMMO Logo"></a>
+    <div class="w3-hide-small">
+      <a href="index.html" class="w3-bar-item" data-nav="home">Home</a>
+      <a href="icons.html" class="w3-bar-item" data-nav="icons">Icons</a>
+      <a href="docs.html" class="w3-bar-item" data-nav="docs">Docs</a>
+    </div>
+    <div class="w3-hide-large w3-hide-medium">
+      <button class="w3-button w3-right" onclick="toggleMobileMenu()">☰</button>
+    </div>
+    <a href="docs.html" class="w3-button w3-section w3-hide-small no-text-decoration">Get Started</a>
+  </div>
+
+  <div id="mobile-nav" class="w3-bar-block w3-white w3-card mobile-menu-hidden">
+    <a href="index.html" class="w3-bar-item" onclick="toggleMobileMenu()" data-nav="home">Home</a>
+    <a href="icons.html" class="w3-bar-item" onclick="toggleMobileMenu()" data-nav="icons">Icons</a>
+    <a href="docs.html" class="w3-bar-item" onclick="toggleMobileMenu()" data-nav="docs">Docs</a>
+    <div class="w3-padding">
+      <a href="docs.html" class="w3-button w3-block no-text-decoration">Get Started</a>
+    </div>
+  </div>
+</div>

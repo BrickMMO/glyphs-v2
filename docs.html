@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Glyphs Icon Library</title>
+
+    <!-- Loading icon fonts and page styles -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.brickmmo.com/glyphs@1.0.0/icons.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+
+</head>
+
+<body>
+    <!-- including reusable header -->
+    <div data-include="assets/partials/header.html"></div>
+
+    <main>
+        <div class="w3-container w3-padding-64 w3-center" style="padding-bottom: 0 !important;">
+            <span class="w3-tag w3-round-large icon-badge">
+                Our Docs
+            </span>
+            <h2 class="w3-xxlarge"><b>Glyphs v2 Documentation</b></h2>
+            <p class="w3-large w3-text-grey">Everything you need to set up, use, and contribute to BrickMMO’s brick-inspired icon library.</p>
+            
+            <!-- Showing docs category cards -->
+            <div class="w3-container docs-cards-container">
+                <div class="w3-row-padding w3-center w3-stretch">
+                    
+                    
+                    <div class="w3-third">
+                        <a href="docs-main.html" class="docs-card-link">
+                            <div class="docs-card">
+                                <h3 class="docs-card-title">Getting Started</h3>
+                                <p class="docs-card-text">If you're new to BrickMMO, or just want to contribute. Here are some tips to get started.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    
+                    <div class="w3-third">
+                        <a href="docs-main.html" class="docs-card-link">
+                            <div class="docs-card">
+                                <h3 class="docs-card-title">Adding Icons</h3>
+                                <p class="docs-card-text">Easily enhance your web projects with icons using just a bit of code it's incredibly straightforward once you grasp the basics.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    
+                    <div class="w3-third">
+                        <a href="docs-main.html" class="docs-card-link">
+                            <div class="docs-card">
+                                <h3 class="docs-card-title">Styling Guide</h3>
+                                <p class="docs-card-text">This section shows which colors and sizes you can use to style your icons by adding small pieces of code.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="w3-container w3-padding-64 w3-center">
+            <img class="w3-image" src="assets/images/brickmmo-icon.png" alt="Architecture" width="44px">
+
+            <h2 class="w3-xxlarge"><b>Frequently asked questions</b></h2>
+            <p class="w3-large w3-text-grey">Got questions? Here are answers to the most common ones from the BrickMMO
+                community.</p>
+
+            
+            <div class="w3-container faq-container">
+
+                
+                <div class="faq-item" onclick="toggleFAQ('faq1')">
+                    <div class="faq-question">
+                        <span>Are the icons free to use?</span>
+                        <i id="faq1-icon" class="ph ph-plus faq-icon"></i>
+                    </div>
+                    <div id="faq1" class="w3-hide faq-answer">
+                        <p>Yes. All icons in Glyphs v2 are free to use for personal and community projects within
+                            BrickMMO. For commercial projects, please check the license details on our docs page.</p>
+                    </div>
+                </div>
+
+                
+                <div class="faq-item" onclick="toggleFAQ('faq2')">
+                    <div class="faq-question">
+                        <span>How do I use the icons in my project?</span>
+                        <i id="faq2-icon" class="ph ph-plus faq-icon"></i>
+                    </div>
+                    <div id="faq2" class="w3-hide faq-answer">
+                        <p>Simply include the BrickMMO Glyphs CSS file and use the appropriate icon classes. For
+                            example: &lt;i class="icon icon-dashboard"&gt;&lt;/i&gt;. Check our documentation for
+                            complete usage instructions.</p>
+                    </div>
+                </div>
+
+                
+                <div class="faq-item" onclick="toggleFAQ('faq3')">
+                    <div class="faq-question">
+                        <span>Can I customize the icon styles?</span>
+                        <i id="faq3-icon" class="ph ph-plus faq-icon"></i>
+                    </div>
+                    <div id="faq3" class="w3-hide faq-answer">
+                        <p>Absolutely! You can customize the icons using CSS. Change the font-size, color, and other
+                            properties to match your design. See our customization guide in the documentation.</p>
+                    </div>
+                </div>
+
+                
+                <div class="faq-item" onclick="toggleFAQ('faq4')">
+                    <div class="faq-question">
+                        <span>Are new icons added regularly?</span>
+                        <i id="faq4-icon" class="ph ph-plus faq-icon"></i>
+                    </div>
+                    <div id="faq4" class="w3-hide faq-answer">
+                        <p>Yes! We regularly add new icons based on community feedback and BrickMMO project needs.
+                            Follow our updates on GitHub or check back here for the latest additions.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    
+    <!-- including reusable footer -->
+    <div data-include="assets/partials/footer.html"></div>
+
+    <!-- Including the site JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.brickmmo.com/bar@1.0.0/bar.js"></script>
+
+
+</body>
+
+</html>

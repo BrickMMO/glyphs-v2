@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Guide - Glyphs Icon Library</title>
+
+    <!-- loading icon fonts and page styles -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.brickmmo.com/glyphs@1.0.0/icons.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+</head>
+
+<body>
+    <!-- including reusable header -->
+    <div data-include="assets/partials/header.html"></div>
+
+    <!-- left sidebar -->
+    <div class="w3-sidebar w3-bar-block sidebar" style="width:250px">
+        <div class="sidebar-section">
+            <div class="sidebar-title-toggle" onclick="toggleSidebarSection('getting-started')">
+                Getting Started
+                <span class="sidebar-arrow" id="getting-started-arrow">▼</span>
+            </div>
+            <div class="sidebar-dropdown" id="getting-started-dropdown">
+                <a href="#quick-start" class="sidebar-link active-sidebar">Quick Start</a>
+                <a href="#setup" class="sidebar-link">Setup</a>
+                <a href="#find-add" class="sidebar-link">Find and Add</a>
+                <a href="#customize" class="sidebar-link">Customize</a>
+            </div>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-title-toggle" onclick="toggleSidebarSection('adding-icons')">
+                Adding Icons
+                <span class="sidebar-arrow" id="adding-icons-arrow">▼</span>
+            </div>
+            <div class="sidebar-dropdown" id="adding-icons-dropdown">
+                <a href="#how-add" class="sidebar-link">How to Add Icons</a>
+                <a href="#how-style" class="sidebar-link">How to Style Icons</a>
+            </div>
+        </div>
+        <div class="sidebar-section">
+            <div class="sidebar-title-toggle" onclick="toggleSidebarSection('styling-icons')">
+                Styling Icons
+                <span class="sidebar-arrow" id="styling-icons-arrow">▼</span>
+            </div>
+            <div class="sidebar-dropdown" id="styling-icons-dropdown">
+                <a href="#styling-brickmmo" class="sidebar-link">Styling with BrickMMO Icons</a>
+                <a href="#styling-basics" class="sidebar-link">Styling Basics</a>
+                <a href="#colours-icons" class="sidebar-link">Colours Icons</a>
+                <a href="#sizing-icons" class="sidebar-link">Sizing Icons</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- documentation content -->
+    <div class="main-content">
+        <div class="w3-container content-wrapper">
+            <!-- Introducing the docs -->
+            <div class="section-label">Getting Started</div>
+            <h1 class="main-title" id="quick-start">Quick Start</h1>
+            
+            <div class="intro-box">
+                <p class="intro-text">
+                    <strong>BrickMMO has its own unique set of icons!</strong> Come and explore how to use and integrate them into your different pages. <strong>Developed by the BrickMMO community</strong>, these icons are completely <strong>free to use</strong>. Enhance your project with our custom-made <strong>Glyphs v2</strong> icons!
+                </p>
+            </div>
+
+            <p class="description-text">
+                We'll cover the basics of setting up BrickMMO Glyphs and finding the perfect icon for your project. This guide will walk you through the steps below:
+            </p>
+
+            <!-- how to set up the CDN -->
+            <h2 class="section-heading" id="setup">1. Setup BrickMMO Icons in Your Project</h2>
+            <p class="description-text">
+                BrickMMO Icon CDN is the easiest way to get BrickMMO icons into your projects. Just grab the code and add the CDN code to the head of each template or page of your project where you want to add icons.
+            </p>
+
+            <div class="code-block dark-code">
+                <pre><code><span class="code-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="code-tag">&lt;html</span> <span class="code-attr">lang</span>=<span class="code-string">"en"</span><span class="code-tag">&gt;</span>
+<span class="code-tag">&lt;head&gt;</span>
+  <span class="code-tag">&lt;meta</span> <span class="code-attr">charset</span>=<span class="code-string">"UTF-8"</span><span class="code-tag">&gt;</span>
+  <span class="code-tag">&lt;meta</span> <span class="code-attr">name</span>=<span class="code-string">"viewport"</span> <span class="code-attr">content</span>=<span class="code-string">"width=device-width, initial-scale=1.0"</span><span class="code-tag">&gt;</span>
+  <span class="code-tag">&lt;title&gt;</span>Adding CDN | Icons BrickMMO<span class="code-tag">&lt;/title&gt;</span>
+
+  <span class="code-comment">&lt;!-- Adding CDN to the head tag --&gt;</span>
+  <span class="code-tag">&lt;link</span> <span class="code-attr">rel</span>=<span class="code-string">"stylesheet"</span> <span class="code-attr">type</span>=<span class="code-string">"text/css"</span> <span class="code-attr">href</span>=<span class="code-string">"https://cdn.brickmmo.com/glyphs@1.0.0/icons.css"</span> <span class="code-tag">/&gt;</span>
+<span class="code-tag">&lt;/head&gt;</span>
+
+<span class="code-tag">&lt;body&gt;</span>
+
+<span class="code-tag">&lt;/body&gt;</span>
+<span class="code-tag">&lt;/html&gt;</span></code></pre>
+            </div>
+
+            <!-- how to find and add icons -->
+            <h2 class="section-heading" id="find-add">2. Find and Add Icons</h2>
+            <p class="description-text">
+                Browse the different icons in v1 to find some icons you like and then add the icon name and style as CSS classes to an HTML &lt;i&gt; tag.
+            </p>
+
+            <div class="code-block light-code">
+                <pre><code><span class="code-tag">&lt;body&gt;</span>
+  <span class="code-comment">&lt;!-- Brick Overflow Icon --&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-brick-overflow"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+
+  <span class="code-comment">&lt;!-- Bricksum Icon --&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-bricksum"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+
+  <span class="code-comment">&lt;!-- Colours Icon --&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-colours"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+
+  <span class="code-comment">&lt;!-- Events Icon --&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-events"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+
+  <span class="code-comment">&lt;!-- Navigation Icon --&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-navigation"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+
+  <span class="code-comment">&lt;!-- Parts Icon --&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-parts"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+
+  <span class="code-comment">&lt;!-- QR Code Icon --&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-qr"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+
+  <span class="code-comment">&lt;!-- Radio Station Icon --&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-radio-station"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+
+  <span class="code-comment">&lt;!-- Train Icon --&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-train"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+
+  <span class="code-comment">&lt;!-- Videokit Icon --&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-videokit"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+<span class="code-tag">&lt;/body&gt;</span></code></pre>
+            </div>
+
+            <!-- how to customize icons -->
+            <h2 class="section-heading" id="customize">3. Make It Awesome</h2>
+            <p class="description-text">
+                Alright, BrickMMO enthusiasts, strap in and get ready to level up your game! It's time to elevate your gameplay to the next level with our own Icons. Let's rock those virtual bricks and roll through the challenges with unbeatable flair!
+            </p>
+
+            <!-- Styling with BrickMMO Icons -->
+            <h1 class="main-title" id="styling-brickmmo">Styling with BrickMMO Icons</h1>
+            <p class="description-text">
+                In this section we explain where and how to add styles with examples.
+            </p>
+            <p class="description-text">
+                Color is typically set inline via the style attribute, while sizes are applied via classes on the element. You can use hex or rgb for color. Size helpers appear alongside the icon class (for example: bm-xs).
+            </p>
+
+            <!-- Styling Basics -->
+            <h2 class="section-heading" id="styling-basics">Styling Basics</h2>
+            <p class="description-text">
+                BrickMMO icons can inherit font-size and color from their parent, aligning with surrounding text. You can also set these directly.
+            </p>
+            <p class="description-text">Example:</p>
+            <div class="code-block light-code">
+                <pre><code><span class="code-tag">&lt;span</span> <span class="code-attr">style</span>=<span class="code-string">"font-size: 3em; color: DarkCyan;"</span><span class="code-tag">&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-colours"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+<span class="code-tag">&lt;/span&gt;</span>
+
+<span class="code-tag">&lt;span</span> <span class="code-attr">style</span>=<span class="code-string">"font-size: 60px; color: DarkMagenta;"</span><span class="code-tag">&gt;</span>
+  <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-qr"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+<span class="code-tag">&lt;/span&gt;</span>
+
+<span class="code-tag">&lt;span</span> <span class="code-attr">style</span>=<span class="code-string">"font-size: 4.25rem;"</span><span class="code-tag">&gt;</span>
+  <span class="code-tag">&lt;span</span> <span class="code-attr">style</span>=<span class="code-string">"color: FireBrick;"</span><span class="code-tag">&gt;</span>
+    <span class="code-tag">&lt;i</span> <span class="code-attr">class</span>=<span class="code-string">"bm-train"</span><span class="code-tag">&gt;&lt;/i&gt;</span>
+  <span class="code-tag">&lt;/span&gt;</span>
+<span class="code-tag">&lt;/span&gt;</span></code></pre>
+            </div>
+
+            <!-- Colours Icons -->
+            <h2 class="section-heading" id="colours-icons">Colours Icons</h2>
+            <p class="description-text">
+                Icons accept any color. Here are some examples you can use inline or in CSS.
+            </p>
+
+            <div class="w3-responsive">
+                <table class="w3-table-all w3-hoverable">
+                    <thead>
+                        <tr class="w3-orange">
+                            <th>Colour</th>
+                            <th>Hexacode</th>
+                            <th>Code</th>
+                            <th>Style</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Taupe Gray</td>
+                            <td>#858485</td>
+                            <td><code>style="color: #858485;"</code></td>
+                            <td><span style="background-color: #858485; width: 20px; height: 20px; display: inline-block; border: 1px solid #ccc;"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Flame (Vivid Orange)</td>
+                            <td>#EF5D23</td>
+                            <td><code>style="color: #EF5D23;"</code></td>
+                            <td><span style="background-color: #EF5D23; width: 20px; height: 20px; display: inline-block; border: 1px solid #ccc;"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Fire Engine Red</td>
+                            <td>#EC2225</td>
+                            <td><code>style="color: #EC2225;"</code></td>
+                            <td><span style="background-color: #EC2225; width: 20px; height: 20px; display: inline-block; border: 1px solid #ccc;"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Blue</td>
+                            <td>#0000FF</td>
+                            <td><code>style="color: #0000FF;"</code></td>
+                            <td><span style="background-color: #0000FF; width: 20px; height: 20px; display: inline-block; border: 1px solid #ccc;"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Aquamarine</td>
+                            <td>#7FFFD4</td>
+                            <td><code>style="color: aquamarine;"</code></td>
+                            <td><span style="background-color: #7FFFD4; width: 20px; height: 20px; display: inline-block; border: 1px solid #ccc;"></span></td>
+                        </tr>
+                        <tr>
+                            <td>DarkSalmon</td>
+                            <td>#E9967A</td>
+                            <td><code>style="color: darksalmon;"</code></td>
+                            <td><span style="background-color: #E9967A; width: 20px; height: 20px; display: inline-block; border: 1px solid #ccc;"></span></td>
+                        </tr>
+                        <tr>
+                            <td>DeepPink</td>
+                            <td>#FF1493</td>
+                            <td><code>style="color: deeppink;"</code></td>
+                            <td><span style="background-color: #FF1493; width: 20px; height: 20px; display: inline-block; border: 1px solid #ccc;"></span></td>
+                        </tr>
+                        <tr>
+                            <td>LightBlue</td>
+                            <td>#ADD8E6</td>
+                            <td><code>style="color: lightblue;"</code></td>
+                            <td><span style="background-color: #ADD8E6; width: 20px; height: 20px; display: inline-block; border: 1px solid #ccc;"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Teal</td>
+                            <td>#008080</td>
+                            <td><code>style="color: teal;"</code></td>
+                            <td><span style="background-color: #008080; width: 20px; height: 20px; display: inline-block; border: 1px solid #ccc;"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Sizing Icons -->
+            <h2 class="section-heading" id="sizing-icons">Sizing Icons</h2>
+            <p class="description-text">
+                Use these helper classes to scale icons by em. You can also set font-size inline if you prefer.
+            </p>
+
+            <div class="w3-responsive">
+                <table class="w3-table-all w3-hoverable">
+                    <thead>
+                        <tr class="w3-orange">
+                            <th>Size Class</th>
+                            <th>bm Class</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2-Extra Small</td>
+                            <td>bm-2xs</td>
+                            <td><code>&lt;i class="bm-events bm-2xs"&gt;&lt;/i&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Extra Small</td>
+                            <td>bm-xs</td>
+                            <td><code>&lt;i class="bm-navigation bm-xs"&gt;&lt;/i&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Small</td>
+                            <td>bm-sm</td>
+                            <td><code>&lt;i class="bm-parts bm-sm"&gt;&lt;/i&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Large</td>
+                            <td>bm-lg</td>
+                            <td><code>&lt;i class="bm-qr bm-lg"&gt;&lt;/i&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>Extra Large</td>
+                            <td>bm-xl</td>
+                            <td><code>&lt;i class="bm-timeline bm-xl"&gt;&lt;/i&gt;</code></td>
+                        </tr>
+                        <tr>
+                            <td>2-Extra Large</td>
+                            <td>bm-2xl</td>
+                            <td><code>&lt;i class="bm-train bm-2xl"&gt;&lt;/i&gt;</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- How To Add Icons -->
+            <h1 class="main-title" id="how-add">How To Add Icons</h1>
+            <p class="description-text">
+                You can place BrickMMO icons almost anywhere. They inherit text properties for natural alignment.
+            </p>
+            <p class="description-text">
+                In this section you'll learn how to include icons, style them, and use the classes that BrickMMO provides.
+            </p>
+
+            <h3 class="section-heading">Before You Get Started</h3>
+            <p class="description-text">Make sure you've added the CDN:</p>
+            <div class="code-block light-code">
+                <pre><code>&lt;link rel="stylesheet" type="text/css" href="https://cdn.brickmmo.com/glyphs@1.0.0/icons.css" /&gt;</code></pre>
+            </div>
+
+            <h3 class="section-heading">Basics</h3>
+            <p class="description-text">You need:</p>
+            <ul class="description-text">
+                <li>The shorthand class name for the style</li>
+                <li>The icon name, prefixed with bm-</li>
+            </ul>
+
+            <h3 class="section-heading">Add Icons to HTML</h3>
+            <p class="description-text">
+                We crafted BrickMMO for inline elements. Use the icon class and include the name prefixed with bm-. You can also use &lt;span&gt; for accessibility-conscious markup.
+            </p>
+            <p class="description-text">Example:</p>
+            <div class="code-block light-code">
+                <pre><code><span class="code-comment">&lt;!-- Using &lt;i&gt; with the `colours` icon --&gt;</span>
+&lt;i class="bm-colours"&gt;&lt;/i&gt;
+
+<span class="code-comment">&lt;!-- Or use a &lt;span&gt; --&gt;</span>
+&lt;span class="bm-colours"&gt;&lt;/span&gt;</code></pre>
+            </div>
+
+            <!-- Which Icons -->
+            <h3 class="section-heading">Which Icons do we have?</h3>
+            <p class="description-text">
+                BrickMMO v1 provides a set of icons used across stations and tools. Here is the list and their usage.
+            </p>
+
+            <div class="w3-responsive">
+                <table class="w3-table-all w3-hoverable">
+                    <thead>
+                        <tr class="w3-orange">
+                            <th>BrickMMO Icon</th>
+                            <th>Code</th>
+                            <th>Icon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>BrickOverflow</td>
+                            <td><code>&lt;i class="bm-brick-overflow"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-brick-overflow"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Bricksum</td>
+                            <td><code>&lt;i class="bm-bricksum"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-bricksum"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Brix</td>
+                            <td><code>&lt;i class="bm-brix"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-brix"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Colours</td>
+                            <td><code>&lt;i class="bm-colours"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-colours"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Control Panel</td>
+                            <td><code>&lt;i class="bm-control-panel"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-control-panel"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Events</td>
+                            <td><code>&lt;i class="bm-events"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-events"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Flow</td>
+                            <td><code>&lt;i class="bm-flow"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-flow"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Navigation</td>
+                            <td><code>&lt;i class="bm-navigation"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-navigation"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Parts</td>
+                            <td><code>&lt;i class="bm-parts"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-parts"></i></td>
+                        </tr>
+                        <tr>
+                            <td>QR Codes</td>
+                            <td><code>&lt;i class="bm-qr"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-qr"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Radio Station</td>
+                            <td><code>&lt;i class="bm-radio-station"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-radio-station"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Train</td>
+                            <td><code>&lt;i class="bm-train"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-train"></i></td>
+                        </tr>
+                        <tr>
+                            <td>VideoKit</td>
+                            <td><code>&lt;i class="bm-videokit"&gt;&lt;/i&gt;</code></td>
+                            <td><i class="bm-videokit"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- How To Style Icons -->
+            <h1 class="main-title" id="how-style">How To Style Icons</h1>
+            <p class="description-text">
+                You can use inline styles but we also provide helpers for color and size. Mix and match as needed.
+            </p>
+
+            <h3 class="section-heading">Setting Color</h3>
+            <p class="description-text">BrickMMO brand colors:</p>
+            <ul class="description-text">
+                <li><strong>Gray</strong> → #858485</li>
+                <li><strong>Orange</strong> → #EF5D23</li>
+                <li><strong>Red</strong> → #EC2225</li>
+            </ul>
+            <p class="description-text">You can always choose any color you like.</p>
+
+            <h3 class="section-heading">Setting Size</h3>
+            <p class="description-text">Six preset sizes:</p>
+            <ul class="description-text">
+                <li><code>.bm-2xs</code> → font-size: .625em;</li>
+                <li><code>.bm-xs</code> → font-size: .75em;</li>
+                <li><code>.bm-sm</code> → font-size: .875em;</li>
+                <li><code>.bm-lg</code> → font-size: 1.25em;</li>
+                <li><code>.bm-xl</code> → font-size: 1.5em;</li>
+                <li><code>.bm-2xl</code> → font-size: 2em;</li>
+            </ul>
+
+            <h3 class="section-heading">Run into a problem?</h3>
+            <p class="description-text"><strong>Double-Check Your Code</strong><br>Ensure you use the latest CDN:</p>
+            <div class="code-block light-code">
+                <pre><code>&lt;link rel="stylesheet" type="text/css" href="https://cdn.brickmmo.com/glyphs@1.0.0/icons.css" /&gt;</code></pre>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="conclusion-section">
+                <h2 class="conclusion-heading">Congratulations! 🎉</h2>
+                <p class="conclusion-text">
+                    You've learned how to implement and style BrickMMO Icons. Use our icon library to enhance your apps with custom, high-quality icons.
+                </p>
+                <p class="conclusion-text">
+                    Always include the CDN link and experiment with sizes and colors. The BrickMMO community is here to help.
+                </p>
+                <div class="w3-panel w3-leftbar w3-border-orange w3-pale-orange">
+                    <h4><strong>💡 Quick Tips:</strong></h4>
+                    <ul>
+                        <li>Test icons across devices and screen sizes</li>
+                        <li>Use semantic elements like <code>&lt;i&gt;</code> or <code>&lt;span&gt;</code></li>
+                        <li>Stick to BrickMMO palette for consistency</li>
+                        <li>Explore the <a href="icons.html">Icons page</a> to discover all icons</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- including reusable footer -->
+    <div data-include="assets/partials/footer.html"></div>
+    <script src="https://cdn.brickmmo.com/bar@1.0.0/bar.js"></script>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
